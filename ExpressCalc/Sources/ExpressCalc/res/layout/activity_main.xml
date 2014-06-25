@@ -1,0 +1,387 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:clickable="true"
+    android:longClickable="true"
+    android:textAlignment="center"
+    tools:context="com.example.expresscalc.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvOutput"
+        android:layout_marginTop="75dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip">
+
+            <Button
+                android:id="@+id/bClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="C"
+                android:textColor="#ffff" />
+
+            <Button
+                android:id="@+id/bDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClicker"
+                android:text="÷"
+                android:textColor="#ffff" />
+
+            <Button
+                android:id="@+id/bMul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="×"
+                android:textColor="#ffff" />
+
+            <Button
+                android:id="@+id/bDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="←"
+                android:textColor="#ffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip" >
+
+            <Button
+                android:id="@+id/b7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/b8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/b9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/bSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="-"
+                android:textColor="#ffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip" >
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/b5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/b6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/bAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="+"
+                android:textColor="#ffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip" >
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/bBrackOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="("
+                android:textColor="#ffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip" >
+
+            <Button
+                android:id="@+id/b0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/bDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="." />
+
+            <Button
+                android:id="@+id/bPluNeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text="+/-" />
+
+            <Button
+                android:id="@+id/bBrackClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClicker"
+                android:text=")"
+                android:textColor="#ffff" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/etInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:digits="1234567890.+-*/()"
+        android:ems="10"
+        android:textColor="#ffff"
+         >
+
+        <requestFocus android:layout_width="wrap_content" />
+
+    </EditText>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tableLayout1"
+        android:layout_toRightOf="@+id/tableLayout1" >
+
+            
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="5dip"  >
+
+            <Button
+                android:id="@+id/bM"
+                android:layout_width="75dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="clip_vertical|center"
+                android:onClick="onClicker"
+                android:text="Mem"
+                android:textAlignment="gravity" />
+
+    </TableRow>
+  
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="5dip" >
+            
+            <Button
+                android:id="@+id/bC"
+                android:layout_width="75dp"
+                android:layout_height="125dp"
+                android:gravity="center|clip_vertical"
+                android:onClick="onClicker"
+                android:text="Clr"
+                android:textAlignment="center" />
+           
+        </TableRow>
+  
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etInput"
+        android:layout_marginTop="15sp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="onClicker"
+        android:text=""
+        android:textColor="#ffff"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOutput"
+         >
+
+        <TableRow
+            android:id="@+id/tableRow15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dip" 
+            android:minWidth="20dp"
+    android:maxWidth="20dp"
+            >
+             <TextView
+        android:id="@+id/tvM1"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#ffff"
+        android:clickable="true"
+        android:paddingRight="20dp"
+        />
+        
+         <TextView
+        android:id="@+id/tvM2"
+        android:onClick="onClicker"
+		android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#F0F28D"
+        android:clickable="true"
+        android:paddingRight="20dp"
+        
+   />
+        
+         <TextView
+        android:id="@+id/tvM3"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#ffff"
+        android:clickable="true"
+        android:paddingRight="20dp"
+        />
+         <TextView
+        android:id="@+id/tvM4"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp"
+        android:textColor="#F0F28D" />
+         
+        </TableRow>
+		<TableRow
+            android:id="@+id/tableRow16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dip"  
+            android:layout_marginRight="8dp">
+             
+        
+         <TextView
+        android:id="@+id/tvM5"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp"
+        android:textColor="#F0F28D"
+        android:clickable="true" 
+        android:paddingRight="20dp"
+        />
+        
+         <TextView
+        android:id="@+id/tvM6"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#ffff"
+        android:clickable="true"
+        android:paddingRight="20dp"/>
+           <TextView
+        android:id="@+id/tvM7"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#F0F28D"
+        android:clickable="true"
+        android:paddingRight="20dp"/>
+        
+         <TextView
+        android:id="@+id/tvM8"
+        android:onClick="onClicker"
+        android:text="@string/Temp"
+        android:textSize="15sp" 
+        android:textColor="#ffff"
+        android:clickable="true"/>
+         
+        </TableRow>
+       
+    </TableLayout>
+
+</RelativeLayout>
