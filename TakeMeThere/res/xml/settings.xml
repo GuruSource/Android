@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Distance Settings" android:key="prefDis">
+        
+        
+        
+    
+          
+         
+         <SwitchPreference
+          
+         
+            android:summary="Set Miles or Kilometer"
+            android:title="Distance Metrics" 
+            android:key="prefDistUnit"
+            android:switchTextOn="Mi"
+            android:switchTextOff="Km"
+            android:summaryOn="Distance measured in Miles"
+            android:summaryOff="Distance measured in Kilometer"
+            android:defaultValue="Mi">
+        </SwitchPreference>
+        
+         
+        <EditTextPreference
+                android:title="When to Notify"
+                android:summary="Set the distance when you should be notified"
+                android:key="prefDisNot"
+                android:dialogTitle="Distance"
+                android:dialogMessage="Please specify an value. Eg: 0.5"
+   				android:dependency="prefNotifiation"
+               />
+    </PreferenceCategory>
+     
+    <PreferenceCategory android:title="Notification Settings" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefNotifiation"
+            android:summary="Turn notification On or Off"
+            android:title="Notification" >
+        </SwitchPreference>
+
+         <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefNotiAudio"
+            android:summaryOn ="You will receive audio notification"
+             android:summaryOff ="You will not receive audio notification"
+            android:title="Audio" 
+            android:dependency="prefNotifiation">
+        </SwitchPreference>
+        
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefNotiVibrate"
+            android:summaryOn ="You will receive vibrate notification"
+             android:summaryOff ="You will not receive vibrate notification"
+            android:title="Vibrate" 
+            android:dependency="prefNotifiation">
+        </SwitchPreference>
+        
+<SwitchPreference
+            android:defaultValue="true"
+            android:key="prefNotitalk"
+            android:summary ="Speak out when the destination is reached"
+            android:title="Speak Out" 
+            android:dependency="prefNotifiation">
+        </SwitchPreference>
+        
+     <!--   
+        <ListPreference
+            android:key="prefUpdateFrequency"
+            android:title="Reminder for Updation"
+            android:summary="Set Update Reminder Frequency"
+            
+            android:entries="@array/updateFrequency"
+            android:entryValues="@array/updateFrequencyValues"
+            />
+            
+              --> 
+            
+            
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Search Settings" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefSearchSet"
+            android:summaryOn ="You searches will be saved"
+             android:summaryOff ="You searches will not be saved"
+            android:title="Save">
+        </SwitchPreference>
+      
+        <Preference android:title="Clear Searches" android:summary="Delete saved searches" android:key="prefSearSettclea"></Preference>
+        
+        </PreferenceCategory>
+        
+   
+   
+</PreferenceScreen>
+
+ 
+        
+       

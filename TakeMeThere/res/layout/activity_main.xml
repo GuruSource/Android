@@ -1,0 +1,140 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.takemethere.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF" >
+
+        <LinearLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" >
+
+            <AutoCompleteTextView
+                android:id="@+id/etAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Enter location or address"
+                android:inputType="textPostalAddress"
+                android:scrollHorizontally="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDelLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/AutoComp"
+            android:layout_alignRight="@+id/bSpeak"
+            android:layout_toRightOf="@+id/AutoComp"
+            android:autoLink="all"
+            android:onClick="DeleteAdd"
+            android:text="Remove from saved"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bClearAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/frameLayout1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_cleartext"
+            android:gravity="center_vertical|center_horizontal|top"
+            android:maxHeight="5dip"
+            android:maxWidth="5dip"
+            android:minHeight="3dip"
+            android:minWidth="3dip"
+            android:onClick="ClearAddress"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/bSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bDelAdd"
+            android:layout_toRightOf="@+id/bExit"
+            android:onClick="startNotification"
+            android:text="Speak"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bDelAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bOpenMap"
+            android:layout_marginTop="16dp"
+            android:onClick="DeleteAdd"
+            android:text="Delete Add"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bOpenMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:onClick="OpenMap"
+            android:text="Open Map app"
+            android:visibility="invisible" />
+
+        <AutoCompleteTextView
+            android:id="@+id/AutoComp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/frameLayout1"
+            android:ems="10"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AutoComp"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/bExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btGo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:onClick="ExitApp"
+            android:background="#F2F5A9" 
+            
+            android:text="Exit" />
+
+        <Button
+            android:id="@+id/btGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_centerHorizontal="true"
+            android:background="#F2F5A9"
+            android:minWidth="200dp"
+            android:onClick="onButtonClick"
+            android:text="Go!"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
